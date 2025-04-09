@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Estética</title>
+    <link rel="stylesheet" href="/citas/estile/cita.css">
+</head>
+<body>
+    <header>
+        <img src="/img/logo.jpg" alt="logotipo">
+        <nav>
+            <a href="/index.html"> <i class="fas fa-home"></i> Inicio</a>
+            <a href="#servicios"> <i class="fas fa-cut"></i>Servicios</a>
+            <a href="/citas/cita.html"><i class="fas fa-calendar-check"></i>Citas</a>
+            <a href="#ubicacion"><i class="fas fa-map-marker-alt"></i>Ubicación</a>
+            <a href="#contacto"><i class="fas fa-envelope"></i>Contacto</a>
+        </nav>
+    </header>
+
+    <h2>Agenda tu cita</h2>
+
+    <form id="form-cita">
+        <label for="servicio">Servicio:</label>
+        <select id="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <!-- Opciones cargadas desde la BD -->
+        </select>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" required>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" required>
+
+        <button type="submit">Reservar</button>
+    </form>
+
+</body>
+</html>

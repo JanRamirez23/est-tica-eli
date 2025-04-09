@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Estilista</title>
+    <link rel="stylesheet" href="/usuario/style/dash.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="/img/eli.jpg" alt="Perfil del Estilista">
+        <h3>Bienvenida, Eli</h3>
+        <ul class="menu">
+            <li onclick="mostrarSeccion('citas')">📅 Citas</li>
+            <li onclick="mostrarSeccion('servicios')">💇‍♂️ Servicios</li>
+            <li onclick="sesion.html('cerrar sesión')">🚪 Salir</li>
+        </ul>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="main-content">
+        <h2>Panel de Control</h2>
+
+        <!-- Sección de Citas -->
+        <div id="citas" class="seccion">
+            <h3>Citas Agendadas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Teléfono</th>
+                        <th>Fecha</th>
+                        <th>Servicio</th>
+                        <th>Anticipo</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-citas">
+                    <!-- Aquí se cargarán las citas con PHP -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Sección de Servicios -->
+        <div id="servicios" class="seccion" style="display: none;">
+            <h3>Agregar Nuevo Servicio</h3>
+            <form id="form-servicio">
+                <label for="nombre">Nombre del Servicio:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" required></textarea>
+
+                <label for="duracion">Duración (min):</label>
+                <input type="number" id="duracion" required>
+
+                <button type="submit">Agregar Servicio</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
